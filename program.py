@@ -1,5 +1,4 @@
 from sympy import *
-from Decimal import *
 
 x, y, z = symbols('x y z')
 init_printing(use_unicode=True)
@@ -25,15 +24,9 @@ def d_funQ():
 def analitic():
     print(d_fun.subs(x, pi/4))
 
-#Aproximação Avançada deltax = 10^-2
-def aproxSimples():
-    f = -120*pi*sin(120*pi*pi/4)
-    print(double(f))
-    print(float(f))
 
 if __name__=='__main__':
     fun()
     d_fun()
-    #d_funQ()
-    #analitic()
-    aproxSimples()
+    d_funQ()
+    analitic()
